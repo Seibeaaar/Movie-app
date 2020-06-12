@@ -6,3 +6,9 @@ export const getMovies = async query => {
   const data = await response.json();
   return data.Search;
 }
+
+export const getMovie = async id => {
+  const response = await fetch(`${BASE_URL}?i=${id}&apikey=${API_KEY}`);
+  const data = await response.json();
+  return data;
+}

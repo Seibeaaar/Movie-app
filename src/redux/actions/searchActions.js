@@ -11,3 +11,10 @@ export const setLoading = status => {
     payload: status
   }
 }
+
+export const getMovieInfo = data => {
+  return {
+    type: 'GET_MOVIE_INFO',
+    payload: data
+  }
+}

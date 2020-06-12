@@ -10,6 +10,8 @@ const searchReducer = (state = initialState, action) => {
       return {...state, movies: action.payload};
     case 'SET_LOADING':
       return {...state, loading: action.payload};
+    case 'GET_MOVIE_INFO':
+      return {...state, movie: action.payload}
     default:
       return state;
   }
