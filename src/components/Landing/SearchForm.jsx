@@ -6,7 +6,7 @@ const SearchForm = ({ fetchMovies }) => {
   const [query, setQuery] = useState('');
   const sendRequest = e => {
     e.preventDefault();
-    fetchMovies(query);
+    query.trim() && fetchMovies(query);
     setQuery('');
   }
   return (
@@ -26,6 +26,7 @@ const SearchForm = ({ fetchMovies }) => {
             className="form-control"
             name="searchText"
             placeholder="Put a name of a movie or series here..."
+            value={query}
             onChange={e => setQuery(e.target.value)}
           />
           <button
