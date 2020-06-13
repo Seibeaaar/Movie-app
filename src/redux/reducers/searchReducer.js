@@ -1,7 +1,7 @@
 const initialState = {
   movies: [],
   loading: false,
-  movie: []
+  movie: {}
 }
 
 const searchReducer = (state = initialState, action) => {
@@ -11,7 +11,9 @@ const searchReducer = (state = initialState, action) => {
     case 'SET_LOADING':
       return {...state, loading: action.payload};
     case 'GET_MOVIE_INFO':
-      return {...state, movie: action.payload}
+      return {...state, movie: action.payload};
+    case 'RESET_MOVIE_INFO':
+      return {...state, movie: {}}
     default:
       return state;
   }

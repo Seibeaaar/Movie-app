@@ -18,3 +18,9 @@ export const getMovieInfo = data => {
     payload: data
   }
 }
+
+export const resetMovieInfo = () => {
+  return {
+    type: 'RESET_MOVIE_INFO'
+  }
+}
